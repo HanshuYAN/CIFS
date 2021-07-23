@@ -35,6 +35,3 @@ CUDA_VISIBLE_DEVICES=0 python CIFAR10_Res18_CIFS_test.py --GPU_IDs 0 --network C
 
 
 
-
-
-

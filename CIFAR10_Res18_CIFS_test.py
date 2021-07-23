@@ -95,7 +95,6 @@ class joint_CW_loss(nn.Module):
         return loss
     
     def _cw_loss(self, output, target,confidence=50, num_classes=10):
-        # Compute the probability of the label class versus the maximum other
         # The same implementation as in repo CAT https://github.com/sunblaze-ucb/curriculum-adversarial-training-CAT
         target = target.data
         target_onehot = torch.zeros(target.size() + (num_classes,))

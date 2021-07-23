@@ -9,7 +9,6 @@ import pathlib
 import math
 import advertorch
 
-# sys.path.append("../../")
 
 def makedirs(dirname):
     pathlib.Path(dirname).mkdir(parents=True, exist_ok=True)

@@ -99,7 +99,6 @@ class CIFAR10_Classifier(BaseModelDNN):
     
     def eval_mode(self):
         self.net.eval()
-        
     def train_mode(self):
         self.net.train()
         
