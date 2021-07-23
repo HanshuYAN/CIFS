@@ -1,0 +1,153 @@
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10_CSAFR_top2_beta10/nets/ckp_latest.pt
+
+
+{'is_joint': False, 'logit_index': 0, 'beta_atk': None}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 60.40%
+
+{'is_joint': False, 'logit_index': 1, 'beta_atk': None}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 58.52%
+
+{'is_joint': False, 'logit_index': 2, 'beta_atk': None}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 59.49%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 0.1}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 57.98%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 1}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 57.78%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 100}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 57.58%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 2}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 57.62%
+
+{'is_joint': False, 'logit_index': 0, 'beta_atk': None}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 52.75%
+
+{'is_joint': False, 'logit_index': 1, 'beta_atk': None}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 51.58%
+
+{'is_joint': False, 'logit_index': 2, 'beta_atk': None}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 51.76%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 0.1}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 50.31%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 1}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 49.36%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 100}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 49.41%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 2}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 49.34%
+
+{'is_joint': False, 'logit_index': 0, 'beta_atk': None}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 50.19%
+
+{'is_joint': False, 'logit_index': 1, 'beta_atk': None}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 49.55%
+
+{'is_joint': False, 'logit_index': 2, 'beta_atk': None}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 49.67%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 0.1}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 48.39%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 1}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 47.37%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 100}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 47.24%
+
+{'is_joint': True, 'logit_index': None, 'beta_atk': 2}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 82.97%
+# defending rate: 47.10%
+

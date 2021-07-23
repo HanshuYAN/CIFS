@@ -1,0 +1,66 @@
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10_CSAFR_topk/nets/ckp_119.pt	***	{'is_joint': True, 'logit_index': None, 'beta_atk': 1000.0}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 59.43%
+
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 51.45%
+
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 48.82%
+
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CW_loss(), eps=0.03137254901960784, nb_iter=30, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 51.08%
+
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10_CSAFR_topk/nets/ckp_119.pt	***	{'is_joint': True, 'logit_index': None, 'beta_atk': 10.0}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 59.35%
+
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=20, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 51.27%
+
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 48.70%
+
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CW_loss(), eps=0.03137254901960784, nb_iter=30, eps_iter=0.0031372549019607846, rand_init=False, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 50.70%
+
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10_CSAFR_topk/nets/ckp_119.pt	***	{'is_joint': True, 'logit_index': None, 'beta_atk': 10.0}
+# attack type: LinfPGDAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, nb_iter=100, eps_iter=0.0031372549019607846, rand_init=True, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 83.86%
+# defending rate: 48.71%
+

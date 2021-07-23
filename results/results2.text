@@ -1,0 +1,10 @@
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10_cas_L4/nets/ckp_119.pt	***	{'is_joint': True, 'logit_index': None, 'beta_atk': 1000.0}
+# attack type: GradientSignAttack
+# attack kwargs: loss_fn=joint_CE_loss(), eps=0.03137254901960784, clip_min=0.0, clip_max=1.0, targeted=False, 
+#
+# accuracy: 86.73%
+# defending rate: 56.02%
+

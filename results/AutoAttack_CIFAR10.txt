@@ -1,0 +1,26 @@
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10__/nets/ckp_119.pt
+[False, 0, None]
+Final Robust Acc:0.44
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10__/nets/ckp_best.pt
+[False, 0, None]
+Final Robust Acc:0.4875
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10_cas_L4/nets/ckp_119.pt
+[False, 1, None]
+Final Robust Acc:0.427
+
+
+------ ******* ------ New Log ------ ******* ------
+./experiments/PAT_Res18_cifar10_cas_L4/nets/ckp_best.pt
+[False, 1, None]
+Final Robust Acc:0.4655
+
+
