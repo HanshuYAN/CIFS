@@ -3,4 +3,5 @@ CIFS: Improving Adversarial Robustness of CNNs via Channel-wise Importance-based
 
 ## Requirements
 Python = 3.6 \
-Pytorch = 1.6
+Pytorch = 1.6 \
+Advertorch = 0.2.3
