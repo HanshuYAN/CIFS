@@ -133,3 +133,23 @@ Training Epoch: 7; Learning rate: 0.10000000  .....
 [12672/50000 (25%)], Loss: 1.740364, Time for Batches: 41.341897
 [25472/50000 (51%)], Loss: 1.705773, Time for Batches: 41.215985
 [38272/50000 (76%)], Loss: 1.770199, Time for Batches: 41.216250
+- evaluation skipped!	 Time for an epoch: 162.32
+Best result @ 000, 0.246 
+
+Training Epoch: 8; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 1.576353, Time for Batches: 41.348623
+[25472/50000 (51%)], Loss: 1.666199, Time for Batches: 41.196119
+[38272/50000 (76%)], Loss: 1.630043, Time for Batches: 41.198511
+- evaluation skipped!	 Time for an epoch: 162.51
+Best result @ 000, 0.246 
+
+Training Epoch: 9; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 1.714685, Time for Batches: 41.338360
+[25472/50000 (51%)], Loss: 1.629174, Time for Batches: 41.191640
+[38272/50000 (76%)], Loss: 1.476015, Time for Batches: 41.201055
+***** Test set acc: 61.85%, adv: 37.34%.	 Time for an epoch: 260.14
+Best result @ 009, 0.3734 
+
+Training Epoch: 10; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 1.599540, Time for Batches: 41.255192
+[25472/50000 (51%)], Loss: 1.599183, Time for Batches: 41.171404
