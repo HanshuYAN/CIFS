@@ -35,7 +35,7 @@ if args.network == '_':
 elif args.network == 'CAS_L4':
     from models.nets.resnet_CAS import ResNet18_L4
     ResNet18 = ResNet18_L4
-elif args.network == 'CSAFR_topk':
+elif args.network == 'CIFS_L4':
     from models.nets.resnet_CIFS import ResNet18_L4
     ResNet18 = ResNet18_L4
 else:
@@ -154,10 +154,10 @@ if __name__ == '__main__':
         if True:
             from advertorch.attacks import FGSM, LinfPGDAttack
             lst_attack = [
-                # (FGSM, dict(
-                #     loss_fn=joint_CE_loss(is_joint=args.is_joint, logit_index=args.logit_index, beta=args.beta_atk),
-                #     eps=8/255,
-                #     clip_min=0.0, clip_max=1.0, targeted=False)),
+                (FGSM, dict(
+                    loss_fn=joint_CE_loss(is_joint=args.is_joint, logit_index=args.logit_index, beta=args.beta_atk),
+                    eps=8/255,
+                    clip_min=0.0, clip_max=1.0, targeted=False)),
                 # (LinfPGDAttack, dict(
                 #     loss_fn=joint_CE_loss(is_joint=args.is_joint, logit_index=args.logit_index, beta=args.beta_atk), 
                 #     eps=8/255, nb_iter=20, eps_iter=0.1*(8/255), rand_init=False,

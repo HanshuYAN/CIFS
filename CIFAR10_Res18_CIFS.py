@@ -16,7 +16,7 @@ parser.add_argument('--is_Train', action='store_true')
 parser.add_argument('--network', default='Vanilla', type=str)
 args, _ = parser.parse_known_args()
 if args.is_Train:
-    parser.add_argument('--exp_path', default='./experiments/cifar10_resnet18_cas')
+    parser.add_argument('--exp_path', default='./experiments/...')
     parser.add_argument('--train_batch_size', default=128, type=int)
     parser.add_argument('--test_batch_size', default=250, type=int)
     
@@ -48,7 +48,7 @@ if args.network == '_':
 elif args.network == 'CAS_L4':
     from models.nets.resnet_CAS import ResNet18_L4
     ResNet18 = ResNet18_L4
-elif args.network == 'CSAFR_topk':
+elif args.network == 'CIFS_L4':
     from models.nets.resnet_CIFS import ResNet18_L4
     ResNet18 = ResNet18_L4
 else:

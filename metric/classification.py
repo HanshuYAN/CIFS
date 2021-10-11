@@ -30,9 +30,6 @@ def topk_dataset_accuracy(predict, test_loader, num_batch=None, device='cuda', t
         lst_label.append(target)
         lst_pred.append(pred)
         
-        # pred = output.max(1, keepdim=True)[1]
-        # clncorrect += pred.eq(target.view_as(pred)).sum().item()
-        
         num_examples += clndata.shape[0]
         idx_batch += 1
         if idx_batch == num_batch:
@@ -109,9 +106,6 @@ def attack_mini_batches(myPredict,
         idx_batch += 1
         if idx_batch == num_batch:
             break
-
-    # return torch.cat(lst_label), torch.cat(lst_pred), torch.cat(lst_advpred), \
-    #     torch.cat(lst_dist) if norm is not None else None
     
     label = torch.cat(lst_label).view(-1, 1)
     pred = torch.cat(lst_pred).view(-1, topk)
@@ -138,7 +132,6 @@ def dataset_accuracy(predict, test_loader, num_batch=None, device=torch.device("
     
     for clndata, target in tqdm(test_loader):
         clndata, target = clndata.to(device), target.to(device)
-        # with torch.no_grad():
         output = predict(clndata)
         pred = output.max(1, keepdim=True)[1]
         clncorrect += pred.eq(target.view_as(pred)).sum().item()
