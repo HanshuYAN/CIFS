@@ -124,3 +124,12 @@ Best result @ 000, 0.246
 
 Training Epoch: 6; Learning rate: 0.10000000  .....
 [12672/50000 (25%)], Loss: 1.751976, Time for Batches: 41.357075
+[25472/50000 (51%)], Loss: 1.696825, Time for Batches: 41.224662
+[38272/50000 (76%)], Loss: 1.734360, Time for Batches: 41.303352
+- evaluation skipped!	 Time for an epoch: 162.54
+Best result @ 000, 0.246 
+
+Training Epoch: 7; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 1.740364, Time for Batches: 41.341897
+[25472/50000 (51%)], Loss: 1.705773, Time for Batches: 41.215985
+[38272/50000 (76%)], Loss: 1.770199, Time for Batches: 41.216250
