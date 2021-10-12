@@ -1,5 +1,5 @@
 # CIFS
-This repository provides codes for [CIFS](https://arxiv.org/abs/2102.05311) (ICML 2020).
+This repository provides codes for [CIFS](https://arxiv.org/abs/2102.05311) (ICML 2021).
 
 CIFS: Improving Adversarial Robustness of CNNs via Channel-wise Importance-based Feature Selection  
 Hanshu Yan, Jingfeng Zhang, Gang Niu, Jiashi Feng, Vincent Y. F. Tan, Masashi Sugiyama
