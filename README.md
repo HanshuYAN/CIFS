@@ -14,7 +14,7 @@ Advertorch = 0.2.3
 
 ## Channel-wise Importance-based Feature Selection
 <p align="center">
-    <img src="markdown/picture.png" width="650"\>
+    <img src="markdown/picture.png" width="500"\>
 </p>
 <p align="center">
  CIFS: 1) Probe Network A^l first makes a raw prediction p^l for z^l. 2) Channels’ relevances g^l are assessed (Relev. Ass.) based on the gradients of the top-k prediction results y^{l,k}. 3) The IMGF generates an importance mask m^l from g^l for channel adjustment.
