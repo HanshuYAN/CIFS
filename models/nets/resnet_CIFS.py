@@ -69,8 +69,8 @@ class CIFS(nn.Module):
         max_logit = top1_logit + top2_logit
         mask = autograd.grad(max_logit, feat, create_graph=True)[0]
         mask = F.adaptive_avg_pool2d(mask, (1,1)) * mask.size(2) * mask.size(3)
-        # mask = F.softmax(mask.view(N,C), dim=1)
-        mask = F.softmax(mask.view(N,C), dim=1)*2
+        mask = F.softmax(mask.view(N,C), dim=1)
+        # mask = F.softmax(mask.view(N,C), dim=1)*2
         return mask.view(N, C, 1, 1)
     
     def _requires_grad(self, requires_grad):

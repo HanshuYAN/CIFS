@@ -1,0 +1,590 @@
+
+
+------ ******* ------ New Log ------ ******* ------
+Namespace(GPU_IDs=[0], SEED=0, attack_loss='CE', beta_atk=2, beta_cls=2, checkpoint='./experiments/', exp_path='./experiments/Cln_Res18_cifar10', is_AdvTr=False, is_Train=True, lr=0.1, milestones=[75, 90], momentum=0.9, net_only=True, network='_', resume=False, test_batch_size=250, tr_epochs=120, train_batch_size=128, weight_decay=0.0002)
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (linear): Linear(in_features=512, out_features=10, bias=True)
+)
+Training Epoch: 0; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 1.962940, Time for Batches: 6.322919
+[25472/50000 (51%)], Loss: 1.695731, Time for Batches: 6.084777
+[38272/50000 (76%)], Loss: 1.577278, Time for Batches: 6.096635
+***** Test set acc: 3174/10000 (31.74%)	 Time for an epoch: 25.30
+Best result @ 000, 0.3174 
+
+Training Epoch: 1; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 1.479350, Time for Batches: 6.364528
+[25472/50000 (51%)], Loss: 1.449814, Time for Batches: 6.113399
+[38272/50000 (76%)], Loss: 1.434574, Time for Batches: 6.125571
+***** Test set acc: 4792/10000 (47.92%)	 Time for an epoch: 28.04
+Best result @ 001, 0.4792 
+
+Training Epoch: 2; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 1.149384, Time for Batches: 6.404861
+[25472/50000 (51%)], Loss: 1.201305, Time for Batches: 6.142605
+[38272/50000 (76%)], Loss: 0.919726, Time for Batches: 6.153669
+***** Test set acc: 5944/10000 (59.44%)	 Time for an epoch: 28.24
+Best result @ 002, 0.5944 
+
+Training Epoch: 3; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 1.143618, Time for Batches: 6.415496
+[25472/50000 (51%)], Loss: 0.891401, Time for Batches: 6.159846
+[38272/50000 (76%)], Loss: 0.815507, Time for Batches: 6.161103
+***** Test set acc: 6393/10000 (63.93%)	 Time for an epoch: 28.17
+Best result @ 003, 0.6393 
+
+Training Epoch: 4; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.752625, Time for Batches: 6.408605
+[25472/50000 (51%)], Loss: 0.790468, Time for Batches: 6.164868
+[38272/50000 (76%)], Loss: 0.661071, Time for Batches: 6.174791
+***** Test set acc: 6727/10000 (67.27%)	 Time for an epoch: 28.21
+Best result @ 004, 0.6727 
+
+Training Epoch: 5; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.551821, Time for Batches: 6.413858
+[25472/50000 (51%)], Loss: 0.754578, Time for Batches: 6.176257
+[38272/50000 (76%)], Loss: 0.611611, Time for Batches: 6.176800
+***** Test set acc: 7388/10000 (73.88%)	 Time for an epoch: 28.22
+Best result @ 005, 0.7388 
+
+Training Epoch: 6; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.734372, Time for Batches: 6.435911
+[25472/50000 (51%)], Loss: 0.698040, Time for Batches: 6.176481
+[38272/50000 (76%)], Loss: 0.651982, Time for Batches: 6.177513
+***** Test set acc: 7833/10000 (78.33%)	 Time for an epoch: 28.31
+Best result @ 006, 0.7833 
+
+Training Epoch: 7; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.480964, Time for Batches: 6.421963
+[25472/50000 (51%)], Loss: 0.531006, Time for Batches: 6.177005
+[38272/50000 (76%)], Loss: 0.532563, Time for Batches: 6.182965
+***** Test set acc: 8023/10000 (80.23%)	 Time for an epoch: 28.24
+Best result @ 007, 0.8023 
+
+Training Epoch: 8; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.437586, Time for Batches: 6.410582
+[25472/50000 (51%)], Loss: 0.514136, Time for Batches: 6.175027
+[38272/50000 (76%)], Loss: 0.554957, Time for Batches: 6.178555
+***** Test set acc: 7778/10000 (77.78%)	 Time for an epoch: 28.24
+Best result @ 007, 0.8023 
+
+Training Epoch: 9; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.381855, Time for Batches: 6.392744
+[25472/50000 (51%)], Loss: 0.547682, Time for Batches: 6.182466
+[38272/50000 (76%)], Loss: 0.521608, Time for Batches: 6.181171
+***** Test set acc: 8081/10000 (80.81%)	 Time for an epoch: 26.93
+Best result @ 009, 0.8081 
+
+Training Epoch: 10; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.288589, Time for Batches: 6.427527
+[25472/50000 (51%)], Loss: 0.582231, Time for Batches: 6.177932
+[38272/50000 (76%)], Loss: 0.374087, Time for Batches: 6.180156
+***** Test set acc: 8283/10000 (82.83%)	 Time for an epoch: 28.22
+Best result @ 010, 0.8283 
+
+Training Epoch: 11; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.253892, Time for Batches: 6.419470
+[25472/50000 (51%)], Loss: 0.495205, Time for Batches: 6.179520
+[38272/50000 (76%)], Loss: 0.439470, Time for Batches: 6.179504
+***** Test set acc: 8184/10000 (81.84%)	 Time for an epoch: 28.28
+Best result @ 010, 0.8283 
+
+Training Epoch: 12; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.248637, Time for Batches: 6.399593
+[25472/50000 (51%)], Loss: 0.512067, Time for Batches: 6.184063
+[38272/50000 (76%)], Loss: 0.270750, Time for Batches: 6.181906
+***** Test set acc: 8321/10000 (83.21%)	 Time for an epoch: 26.94
+Best result @ 012, 0.8321 
+
+Training Epoch: 13; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.351250, Time for Batches: 6.435257
+[25472/50000 (51%)], Loss: 0.494009, Time for Batches: 6.179688
+[38272/50000 (76%)], Loss: 0.381817, Time for Batches: 6.180169
+***** Test set acc: 8462/10000 (84.62%)	 Time for an epoch: 28.25
+Best result @ 013, 0.8462 
+
+Training Epoch: 14; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.407666, Time for Batches: 6.418004
+[25472/50000 (51%)], Loss: 0.286582, Time for Batches: 6.176247
+[38272/50000 (76%)], Loss: 0.357732, Time for Batches: 6.175864
+***** Test set acc: 8437/10000 (84.37%)	 Time for an epoch: 28.23
+Best result @ 013, 0.8462 
+
+Training Epoch: 15; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.385608, Time for Batches: 6.390836
+[25472/50000 (51%)], Loss: 0.195289, Time for Batches: 6.178396
+[38272/50000 (76%)], Loss: 0.294164, Time for Batches: 6.180099
+***** Test set acc: 8298/10000 (82.98%)	 Time for an epoch: 26.93
+Best result @ 013, 0.8462 
+
+Training Epoch: 16; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.374706, Time for Batches: 6.426469
+[25472/50000 (51%)], Loss: 0.275116, Time for Batches: 6.180238
+[38272/50000 (76%)], Loss: 0.298692, Time for Batches: 6.180983
+***** Test set acc: 8395/10000 (83.95%)	 Time for an epoch: 26.99
+Best result @ 013, 0.8462 
+
+Training Epoch: 17; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.301916, Time for Batches: 6.492688
+[25472/50000 (51%)], Loss: 0.284876, Time for Batches: 6.181600
+[38272/50000 (76%)], Loss: 0.397153, Time for Batches: 6.182524
+***** Test set acc: 8477/10000 (84.77%)	 Time for an epoch: 27.04
+Best result @ 017, 0.8477 
+
+Training Epoch: 18; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.213902, Time for Batches: 6.416073
+[25472/50000 (51%)], Loss: 0.323021, Time for Batches: 6.178514
+[38272/50000 (76%)], Loss: 0.340603, Time for Batches: 6.179599
+***** Test set acc: 8423/10000 (84.23%)	 Time for an epoch: 28.23
+Best result @ 017, 0.8477 
+
+Training Epoch: 19; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.213782, Time for Batches: 6.422025
+[25472/50000 (51%)], Loss: 0.242657, Time for Batches: 6.177466
+[38272/50000 (76%)], Loss: 0.245460, Time for Batches: 6.181221
+***** Test set acc: 8490/10000 (84.90%)	 Time for an epoch: 26.96
+Best result @ 019, 0.849 
+
+Training Epoch: 20; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.446095, Time for Batches: 6.423505
+[25472/50000 (51%)], Loss: 0.152875, Time for Batches: 6.178039
+[38272/50000 (76%)], Loss: 0.274998, Time for Batches: 6.178000
+***** Test set acc: 8695/10000 (86.95%)	 Time for an epoch: 28.24
+Best result @ 020, 0.8695 
+
+Training Epoch: 21; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.241716, Time for Batches: 6.442592
+[25472/50000 (51%)], Loss: 0.321810, Time for Batches: 6.173619
+[38272/50000 (76%)], Loss: 0.256056, Time for Batches: 6.175328
+***** Test set acc: 8561/10000 (85.61%)	 Time for an epoch: 28.30
+Best result @ 020, 0.8695 
+
+Training Epoch: 22; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.201443, Time for Batches: 6.388341
+[25472/50000 (51%)], Loss: 0.332970, Time for Batches: 6.177883
+[38272/50000 (76%)], Loss: 0.202866, Time for Batches: 6.178312
+***** Test set acc: 8654/10000 (86.54%)	 Time for an epoch: 26.92
+Best result @ 020, 0.8695 
+
+Training Epoch: 23; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.290353, Time for Batches: 6.390420
+[25472/50000 (51%)], Loss: 0.248322, Time for Batches: 6.178712
+[38272/50000 (76%)], Loss: 0.233285, Time for Batches: 6.181443
+***** Test set acc: 8412/10000 (84.12%)	 Time for an epoch: 26.92
+Best result @ 020, 0.8695 
+
+Training Epoch: 24; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.323017, Time for Batches: 6.426167
+[25472/50000 (51%)], Loss: 0.324520, Time for Batches: 6.175217
+[38272/50000 (76%)], Loss: 0.394987, Time for Batches: 6.177161
+***** Test set acc: 8559/10000 (85.59%)	 Time for an epoch: 27.82
+Best result @ 020, 0.8695 
+
+Training Epoch: 25; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.159849, Time for Batches: 6.400354
+[25472/50000 (51%)], Loss: 0.169578, Time for Batches: 6.178762
+[38272/50000 (76%)], Loss: 0.310801, Time for Batches: 6.179361
+***** Test set acc: 8774/10000 (87.74%)	 Time for an epoch: 26.92
+Best result @ 025, 0.8774 
+
+Training Epoch: 26; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.246225, Time for Batches: 6.418892
+[25472/50000 (51%)], Loss: 0.227957, Time for Batches: 6.173715
+[38272/50000 (76%)], Loss: 0.255266, Time for Batches: 6.175611
+***** Test set acc: 8868/10000 (88.68%)	 Time for an epoch: 28.30
+Best result @ 026, 0.8868 
+
+Training Epoch: 27; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.123768, Time for Batches: 6.401929
+[25472/50000 (51%)], Loss: 0.193012, Time for Batches: 6.174744
+[38272/50000 (76%)], Loss: 0.224250, Time for Batches: 6.175066
+***** Test set acc: 8599/10000 (85.99%)	 Time for an epoch: 28.22
+Best result @ 026, 0.8868 
+
+Training Epoch: 28; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.161481, Time for Batches: 6.398542
+[25472/50000 (51%)], Loss: 0.143485, Time for Batches: 6.175008
+[38272/50000 (76%)], Loss: 0.207027, Time for Batches: 6.178438
+***** Test set acc: 8522/10000 (85.22%)	 Time for an epoch: 26.92
+Best result @ 026, 0.8868 
+
+Training Epoch: 29; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.211900, Time for Batches: 6.397520
+[25472/50000 (51%)], Loss: 0.189430, Time for Batches: 6.176584
+[38272/50000 (76%)], Loss: 0.248465, Time for Batches: 6.178708
+***** Test set acc: 8621/10000 (86.21%)	 Time for an epoch: 26.91
+Best result @ 026, 0.8868 
+
+Training Epoch: 30; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.145789, Time for Batches: 6.396392
+[25472/50000 (51%)], Loss: 0.165614, Time for Batches: 6.178656
+[38272/50000 (76%)], Loss: 0.158948, Time for Batches: 6.177382
+***** Test set acc: 8812/10000 (88.12%)	 Time for an epoch: 26.95
+Best result @ 026, 0.8868 
+
+Training Epoch: 31; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.137203, Time for Batches: 6.400893
+[25472/50000 (51%)], Loss: 0.174938, Time for Batches: 6.179317
+[38272/50000 (76%)], Loss: 0.145659, Time for Batches: 6.178812
+***** Test set acc: 8458/10000 (84.58%)	 Time for an epoch: 26.95
+Best result @ 026, 0.8868 
+
+Training Epoch: 32; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.232044, Time for Batches: 6.393590
+[25472/50000 (51%)], Loss: 0.203486, Time for Batches: 6.182111
+[38272/50000 (76%)], Loss: 0.175852, Time for Batches: 6.180971
+***** Test set acc: 8748/10000 (87.48%)	 Time for an epoch: 26.96
+Best result @ 026, 0.8868 
+
+Training Epoch: 33; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.164907, Time for Batches: 6.403539
+[25472/50000 (51%)], Loss: 0.365740, Time for Batches: 6.180141
+[38272/50000 (76%)], Loss: 0.114991, Time for Batches: 6.179089
+***** Test set acc: 8458/10000 (84.58%)	 Time for an epoch: 27.04
+Best result @ 026, 0.8868 
+
+Training Epoch: 34; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.155725, Time for Batches: 6.403616
+[25472/50000 (51%)], Loss: 0.237161, Time for Batches: 6.180476
+[38272/50000 (76%)], Loss: 0.268454, Time for Batches: 6.179641
+***** Test set acc: 8749/10000 (87.49%)	 Time for an epoch: 26.95
+Best result @ 026, 0.8868 
+
+Training Epoch: 35; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.230299, Time for Batches: 6.443854
+[25472/50000 (51%)], Loss: 0.283322, Time for Batches: 6.181421
+[38272/50000 (76%)], Loss: 0.224553, Time for Batches: 6.182922
+***** Test set acc: 8577/10000 (85.77%)	 Time for an epoch: 27.02
+Best result @ 026, 0.8868 
+
+Training Epoch: 36; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.179383, Time for Batches: 6.445294
+[25472/50000 (51%)], Loss: 0.130914, Time for Batches: 6.179767
+[38272/50000 (76%)], Loss: 0.249427, Time for Batches: 6.179934
+***** Test set acc: 8815/10000 (88.15%)	 Time for an epoch: 27.05
+Best result @ 026, 0.8868 
+
+Training Epoch: 37; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.122301, Time for Batches: 6.397114
+[25472/50000 (51%)], Loss: 0.168396, Time for Batches: 6.180811
+[38272/50000 (76%)], Loss: 0.190941, Time for Batches: 6.182120
+***** Test set acc: 8664/10000 (86.64%)	 Time for an epoch: 26.96
+Best result @ 026, 0.8868 
+
+Training Epoch: 38; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.228623, Time for Batches: 6.403970
+[25472/50000 (51%)], Loss: 0.282997, Time for Batches: 6.178536
+[38272/50000 (76%)], Loss: 0.282289, Time for Batches: 6.180956
+***** Test set acc: 8288/10000 (82.88%)	 Time for an epoch: 26.94
+Best result @ 026, 0.8868 
+
+Training Epoch: 39; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.191852, Time for Batches: 6.411739
+[25472/50000 (51%)], Loss: 0.216020, Time for Batches: 6.181287
+[38272/50000 (76%)], Loss: 0.255774, Time for Batches: 6.185221
+***** Test set acc: 9013/10000 (90.13%)	 Time for an epoch: 26.96
+Best result @ 039, 0.9013 
+
+Training Epoch: 40; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.256963, Time for Batches: 6.417222
+[25472/50000 (51%)], Loss: 0.231838, Time for Batches: 6.179326
+[38272/50000 (76%)], Loss: 0.165045, Time for Batches: 6.178839
+***** Test set acc: 8674/10000 (86.74%)	 Time for an epoch: 28.24
+Best result @ 039, 0.9013 
+
+Training Epoch: 41; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.179505, Time for Batches: 6.407658
+[25472/50000 (51%)], Loss: 0.242365, Time for Batches: 6.177597
+[38272/50000 (76%)], Loss: 0.126505, Time for Batches: 6.178817
+***** Test set acc: 8690/10000 (86.90%)	 Time for an epoch: 26.93
+Best result @ 039, 0.9013 
+
+Training Epoch: 42; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.081487, Time for Batches: 6.403048
+[25472/50000 (51%)], Loss: 0.189320, Time for Batches: 6.174825
+[38272/50000 (76%)], Loss: 0.163485, Time for Batches: 6.177469
+***** Test set acc: 8776/10000 (87.76%)	 Time for an epoch: 26.93
+Best result @ 039, 0.9013 
+
+Training Epoch: 43; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.175154, Time for Batches: 6.409091
+[25472/50000 (51%)], Loss: 0.129356, Time for Batches: 6.179565
+[38272/50000 (76%)], Loss: 0.229046, Time for Batches: 6.180896
+***** Test set acc: 8788/10000 (87.88%)	 Time for an epoch: 26.96
+Best result @ 039, 0.9013 
+
+Training Epoch: 44; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.137704, Time for Batches: 6.405630
+[25472/50000 (51%)], Loss: 0.141517, Time for Batches: 6.175917
+[38272/50000 (76%)], Loss: 0.163134, Time for Batches: 6.179213
+***** Test set acc: 8461/10000 (84.61%)	 Time for an epoch: 27.02
+Best result @ 039, 0.9013 
+
+Training Epoch: 45; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.245386, Time for Batches: 6.405693
+[25472/50000 (51%)], Loss: 0.239116, Time for Batches: 6.175585
+[38272/50000 (76%)], Loss: 0.138678, Time for Batches: 6.178015
+***** Test set acc: 8713/10000 (87.13%)	 Time for an epoch: 27.35
+Best result @ 039, 0.9013 
+
+Training Epoch: 46; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.204723, Time for Batches: 6.409035
+[25472/50000 (51%)], Loss: 0.132853, Time for Batches: 6.175100
+[38272/50000 (76%)], Loss: 0.201690, Time for Batches: 6.175608
+***** Test set acc: 8745/10000 (87.45%)	 Time for an epoch: 26.94
+Best result @ 039, 0.9013 
+
+Training Epoch: 47; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.185102, Time for Batches: 6.404183
+[25472/50000 (51%)], Loss: 0.138577, Time for Batches: 6.177453
+[38272/50000 (76%)], Loss: 0.238367, Time for Batches: 6.175927
+***** Test set acc: 8466/10000 (84.66%)	 Time for an epoch: 27.02
+Best result @ 039, 0.9013 
+
+Training Epoch: 48; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.198455, Time for Batches: 6.406103
+[25472/50000 (51%)], Loss: 0.142735, Time for Batches: 6.178681
+[38272/50000 (76%)], Loss: 0.148265, Time for Batches: 6.177061
+***** Test set acc: 8793/10000 (87.93%)	 Time for an epoch: 26.93
+Best result @ 039, 0.9013 
+
+Training Epoch: 49; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.221294, Time for Batches: 6.398829
+[25472/50000 (51%)], Loss: 0.210081, Time for Batches: 6.177676
+[38272/50000 (76%)], Loss: 0.226064, Time for Batches: 6.181018
+***** Test set acc: 8626/10000 (86.26%)	 Time for an epoch: 26.92
+Best result @ 039, 0.9013 
+
+Training Epoch: 50; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.170591, Time for Batches: 6.420594
+[25472/50000 (51%)], Loss: 0.270671, Time for Batches: 6.176240
+[38272/50000 (76%)], Loss: 0.256727, Time for Batches: 6.180560
+***** Test set acc: 8399/10000 (83.99%)	 Time for an epoch: 26.96
+Best result @ 039, 0.9013 
+
+Training Epoch: 51; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.129994, Time for Batches: 6.400987
+[25472/50000 (51%)], Loss: 0.263308, Time for Batches: 6.177874
+[38272/50000 (76%)], Loss: 0.137296, Time for Batches: 6.178319
+***** Test set acc: 8863/10000 (88.63%)	 Time for an epoch: 26.93
+Best result @ 039, 0.9013 
+
+Training Epoch: 52; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.125796, Time for Batches: 6.408957
+[25472/50000 (51%)], Loss: 0.137168, Time for Batches: 6.177572
+[38272/50000 (76%)], Loss: 0.203182, Time for Batches: 6.177425
+***** Test set acc: 8873/10000 (88.73%)	 Time for an epoch: 26.95
+Best result @ 039, 0.9013 
+
+Training Epoch: 53; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.140178, Time for Batches: 6.397965
+[25472/50000 (51%)], Loss: 0.127560, Time for Batches: 6.178687
+[38272/50000 (76%)], Loss: 0.097254, Time for Batches: 6.178609
+***** Test set acc: 8872/10000 (88.72%)	 Time for an epoch: 26.92
+Best result @ 039, 0.9013 
+
+Training Epoch: 54; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.195461, Time for Batches: 6.413769
+[25472/50000 (51%)], Loss: 0.159575, Time for Batches: 6.175264
+[38272/50000 (76%)], Loss: 0.170042, Time for Batches: 6.176263
+***** Test set acc: 8994/10000 (89.94%)	 Time for an epoch: 27.51
+Best result @ 039, 0.9013 
+
+Training Epoch: 55; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.137643, Time for Batches: 6.390095
+[25472/50000 (51%)], Loss: 0.225004, Time for Batches: 6.177322
+[38272/50000 (76%)], Loss: 0.139702, Time for Batches: 6.181886
+***** Test set acc: 8889/10000 (88.89%)	 Time for an epoch: 27.02
+Best result @ 039, 0.9013 
+
+Training Epoch: 56; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.230144, Time for Batches: 6.396088
+[25472/50000 (51%)], Loss: 0.257824, Time for Batches: 6.177815
+[38272/50000 (76%)], Loss: 0.132040, Time for Batches: 6.176632
+***** Test set acc: 8937/10000 (89.37%)	 Time for an epoch: 27.01
+Best result @ 039, 0.9013 
+
+Training Epoch: 57; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.154161, Time for Batches: 6.425064
+[25472/50000 (51%)], Loss: 0.153789, Time for Batches: 6.178943
+[38272/50000 (76%)], Loss: 0.272414, Time for Batches: 6.178855
+***** Test set acc: 8816/10000 (88.16%)	 Time for an epoch: 27.05
+Best result @ 039, 0.9013 
+
+Training Epoch: 58; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.158725, Time for Batches: 6.409233
+[25472/50000 (51%)], Loss: 0.292803, Time for Batches: 6.176538
+[38272/50000 (76%)], Loss: 0.178721, Time for Batches: 6.178198
+***** Test set acc: 8669/10000 (86.69%)	 Time for an epoch: 26.83
+Best result @ 039, 0.9013 
+
+Training Epoch: 59; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.168836, Time for Batches: 6.396203
+[25472/50000 (51%)], Loss: 0.183759, Time for Batches: 6.177713
+[38272/50000 (76%)], Loss: 0.205023, Time for Batches: 6.178403
+***** Test set acc: 8729/10000 (87.29%)	 Time for an epoch: 26.91
+Best result @ 039, 0.9013 
+
+Training Epoch: 60; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.156325, Time for Batches: 6.420234
+[25472/50000 (51%)], Loss: 0.127235, Time for Batches: 6.175008
+[38272/50000 (76%)], Loss: 0.165849, Time for Batches: 6.173477
+***** Test set acc: 8625/10000 (86.25%)	 Time for an epoch: 27.79
+Best result @ 039, 0.9013 
+
+Training Epoch: 61; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.134383, Time for Batches: 6.512789
+[25472/50000 (51%)], Loss: 0.142415, Time for Batches: 6.174699
+[38272/50000 (76%)], Loss: 0.113265, Time for Batches: 6.174808
+***** Test set acc: 8787/10000 (87.87%)	 Time for an epoch: 27.13
+Best result @ 039, 0.9013 
+
+Training Epoch: 62; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.257056, Time for Batches: 6.403620
+[25472/50000 (51%)], Loss: 0.176613, Time for Batches: 6.174465
+[38272/50000 (76%)], Loss: 0.169937, Time for Batches: 6.174568
+***** Test set acc: 8849/10000 (88.49%)	 Time for an epoch: 26.93
+Best result @ 039, 0.9013 
+
+Training Epoch: 63; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.188335, Time for Batches: 6.401977
+[25472/50000 (51%)], Loss: 0.190272, Time for Batches: 6.175691
+[38272/50000 (76%)], Loss: 0.147474, Time for Batches: 6.179164
+***** Test set acc: 8869/10000 (88.69%)	 Time for an epoch: 26.92
+Best result @ 039, 0.9013 
+
+Training Epoch: 64; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.232592, Time for Batches: 6.407533
+[25472/50000 (51%)], Loss: 0.061993, Time for Batches: 6.176944
+[38272/50000 (76%)], Loss: 0.176329, Time for Batches: 6.177381
+***** Test set acc: 8882/10000 (88.82%)	 Time for an epoch: 27.03
+Best result @ 039, 0.9013 
+
+Training Epoch: 65; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.209093, Time for Batches: 6.407899
+[25472/50000 (51%)], Loss: 0.185722, Time for Batches: 6.178709
+[38272/50000 (76%)], Loss: 0.198493, Time for Batches: 6.178985
+***** Test set acc: 8575/10000 (85.75%)	 Time for an epoch: 27.01
+Best result @ 039, 0.9013 
+
+Training Epoch: 66; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.167033, Time for Batches: 6.398386
+[25472/50000 (51%)], Loss: 0.259319, Time for Batches: 6.174203
+[38272/50000 (76%)], Loss: 0.163813, Time for Batches: 6.175549
+***** Test set acc: 8866/10000 (88.66%)	 Time for an epoch: 26.91
+Best result @ 039, 0.9013 
+
+Training Epoch: 67; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.135518, Time for Batches: 6.389060
+[25472/50000 (51%)], Loss: 0.126782, Time for Batches: 6.179091
+[38272/50000 (76%)], Loss: 0.160392, Time for Batches: 6.176963
+***** Test set acc: 8743/10000 (87.43%)	 Time for an epoch: 26.91
+Best result @ 039, 0.9013 
+
+Training Epoch: 68; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.188333, Time for Batches: 6.386743
+[25472/50000 (51%)], Loss: 0.147513, Time for Batches: 6.177062
+[38272/50000 (76%)], Loss: 0.158262, Time for Batches: 6.176765
+***** Test set acc: 8902/10000 (89.02%)	 Time for an epoch: 26.91
+Best result @ 039, 0.9013 
+
+Training Epoch: 69; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.192410, Time for Batches: 6.421477
+[25472/50000 (51%)], Loss: 0.193295, Time for Batches: 6.175265
+[38272/50000 (76%)], Loss: 0.149774, Time for Batches: 6.177226
+***** Test set acc: 8688/10000 (86.88%)	 Time for an epoch: 27.04
+Best result @ 039, 0.9013 
+
+Training Epoch: 70; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.220993, Time for Batches: 6.406796
+[25472/50000 (51%)], Loss: 0.182948, Time for Batches: 6.176042
+[38272/50000 (76%)], Loss: 0.168059, Time for Batches: 6.176382
+***** Test set acc: 8706/10000 (87.06%)	 Time for an epoch: 26.94
+Best result @ 039, 0.9013 
+
+Training Epoch: 71; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.166137, Time for Batches: 6.401742
+[25472/50000 (51%)], Loss: 0.165329, Time for Batches: 6.177939
+[38272/50000 (76%)], Loss: 0.191749, Time for Batches: 6.175316
+***** Test set acc: 8594/10000 (85.94%)	 Time for an epoch: 26.92
+Best result @ 039, 0.9013 
+
+Training Epoch: 72; Learning rate: 0.10000000  .....
+[12672/50000 (25%)], Loss: 0.197503, Time for Batches: 6.399681
+[25472/50000 (51%)], Loss: 0.256475, Time for Batches: 6.175343
+[38272/50000 (76%)], Loss: 0.145451, Time for Batches: 6.174345
